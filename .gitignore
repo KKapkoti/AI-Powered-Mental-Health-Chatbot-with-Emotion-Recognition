@@ -1,0 +1,37 @@
+# Node.js / NPM
+node_modules/
+npm-debug.log
+
+
+# Compiled output
+/build
+/dist
+/*.js.map
+
+# Logs and debugging
+logs/
+*.log
+npm-debug.log*
+lerna-debug.log*
+.vscode/
+
+
+# Environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build artifacts
+build/
+
+
+# Visual Studio Code
+.vscode/
+
+
+# Miscellaneous
+*.env
+
+
+package-lock.json

@@ -1,0 +1,41 @@
+/* ChatbotStyles.css */
+
+/* Slim beautiful scrollbar */
+.chatbot-scroll {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #4caf50 #f1f1f1;
+}
+
+/* Chrome, Edge, Safari */
+.chatbot-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chatbot-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.chatbot-scroll::-webkit-scrollbar-thumb {
+  background-color: #4caf50;
+  border-radius: 10px;
+}
+
+/* Smooth Pop Animation */
+@keyframes popIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-pop {
+  animation: popIn 0.4s ease;
+}
