@@ -58,11 +58,11 @@ Our chatbot is designed as an always-available companion that listens, understan
 
 | Home Page                                   |
 |---------------------------------------------|
-| ![Home Page](./screenshots/homePage.jpg)        |
+| ![Home Page](./screenshots/HomePage.jpg)        |
 
 | Login Page                                 |
 |--------------------------------------------|                        
-| ![Login Page](./screenshots/loginPage.jpg) |
+| ![Login Page](./screenshots/LoginPage.jpg) |
 
 | SignUp Page                                 |
 |--------------------------------------------|                        
