@@ -185,8 +185,8 @@ uvicorn main:app --reload
 
 
 ## Authors
-- Anchal Sharma [@mansir04](https://github.com/mansir04)
-- Ankit Kumar [@shaheera02](https://github.com/shaheera02)
+- Anchal Sharma [@Asharma-del](https://github.com/Asharma-del)
+- Ankit Kumar [@mrankit123](https://github.com/mrankit123)
 - Kavita Kapkoti [@KKapkoti](https://github.com/KKapkoti)
 - Yogita [@yogitasharma15](https://github.com/yogitasharma15)
 
