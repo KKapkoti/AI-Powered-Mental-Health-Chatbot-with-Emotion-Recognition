@@ -78,7 +78,7 @@ Our chatbot is designed as an always-available companion that listens, understan
 
 | Doctor Consult Page                                 |
 |-----------------------------------------------------|
-| ![Doctor Consult](./screenshots/doctor consult.jpg) |
+| ![Doctor Consult](./screenshots/doctorConsult.jpg) |
 
 
 ---
