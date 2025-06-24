@@ -34,7 +34,7 @@ Our chatbot is designed as an always-available companion that listens, understan
 - **Frontend**: React.js, HTML, CSS, Bootstrap  
 - **Backend**: Node.js, Express.js  
 - **AI/NLP**: Python (NLTK, spaCy, Transformers, TextBlob/VADER)  
-- **Database**: MongoDB (optional)  
+- **Database**: MongoDB  
 - **APIs**: JokeAPI, MemeGen API, REST APIs  
 - **Deployment**: Heroku, AWS, Vercel  
 - **Tools**: Postman, Git & GitHub, Anaconda/Jupyter Notebook
