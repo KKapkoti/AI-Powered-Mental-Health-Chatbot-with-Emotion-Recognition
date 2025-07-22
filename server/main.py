@@ -8,13 +8,13 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 import logging
 
 # -------------------------
-# ✅ Configuration & Logging
+# Configuration & Logging
 # -------------------------
 MAX_LEN = 100  # Must match model training
 logging.basicConfig(level=logging.INFO)
 
 # -------------------------
-# ✅ Load Model and Tokenizer
+# Load Model and Tokenizer
 # -------------------------
 model = tf.keras.models.load_model("emotion_lstm_model.h5")
 
@@ -25,18 +25,18 @@ with open("label_encoder.pkl", "rb") as f:
     label_encoder = pickle.load(f)
 
 # -------------------------
-# ✅ Define Input Schema
+# Define Input Schema
 # -------------------------
 class TextInput(BaseModel):
     text: str
 
 # -------------------------
-# ✅ Initialize FastAPI App
+#  Initialize FastAPI App
 # -------------------------
 app = FastAPI()
 
 # -------------------------
-# ✅ Enable CORS
+# Enable CORS
 # -------------------------
 app.add_middleware(
     CORSMiddleware,
@@ -47,14 +47,14 @@ app.add_middleware(
 )
 
 # -------------------------
-# ✅ Health Check Route
+# Health Check Route
 # -------------------------
 @app.get("/")
 def read_root():
     return {"message": "Emotion detection API is running!"}
 
 # -------------------------
-# ✅ Emotion Prediction Route
+# Emotion Prediction Route
 # -------------------------
 @app.post("/predict-emotion")
 def predict_emotion(input: TextInput):
