@@ -72,6 +72,11 @@ app.use(
 );
 
 
+app.get('/', (req, res) => {
+  res.send(' Mental Health API is running.');
+});
+
+
 // Routes
 app.use('/api', jokeRoutes);
 app.use('/api/auth', authRoutes);
