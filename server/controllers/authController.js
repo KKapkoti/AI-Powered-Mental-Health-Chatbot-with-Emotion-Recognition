@@ -8,7 +8,7 @@ const { generateToken, verifyToken } = require('../config/jwt');
 exports.signUp = async (req, res, next) => {
     const { username, email, password, age } = req.body;
     try {
-        console.log("🔹 Received Signup Request:", { username, email, password });
+        console.log(" Received Signup Request:", { username, email, password });
        // Check if the user already exists
     const existingUser = await User.findOne({ email });
     if (existingUser) {
@@ -16,10 +16,10 @@ exports.signUp = async (req, res, next) => {
     }
          // Hash password
          const salt = await bcrypt.genSalt(10);
-         console.log("🔹 Generated Salt:", salt);
+         console.log(" Generated Salt:", salt);
 
          const hashedPassword = await bcrypt.hash(password, salt);
-         console.log("🔹 Hashed Password:", hashedPassword);
+         console.log(" Hashed Password:", hashedPassword);
  
         const user = new User({
             username,
@@ -28,10 +28,10 @@ exports.signUp = async (req, res, next) => {
             age
         });
 
-        // ✅ Generate Token
+        // Generate Token
         const token = generateToken(user._id);
         await user.save();
-        console.log("✅ User Saved:", user);
+        console.log(" User Saved:", user);
 
         res.status(201).json({ 
                 sucess: true,

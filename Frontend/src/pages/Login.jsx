@@ -23,7 +23,7 @@ const LoginSignup = () => {
     e.preventDefault();
     const endpoint = isLogin
       ? `${BASE_URL}/api/auth/login`
-      : `${BASE_URL}/register`;
+      : `${BASE_URL}/api/auth/register`;
 
     try {
       const response = await axios.post(endpoint, formData, { withCredentials: true });

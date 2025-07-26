@@ -31,7 +31,7 @@ build/
 
 
 # Miscellaneous
-*.env
-
+.env
+.env.*
 
 package-lock.json
