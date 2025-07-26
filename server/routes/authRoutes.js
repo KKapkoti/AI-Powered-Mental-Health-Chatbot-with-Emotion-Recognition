@@ -29,7 +29,7 @@ router.get(
       maxAge: 24 * 60 * 60 * 1000, // 30 days
     });
     // Redirect to frontend
-     res.redirect(`http://localhost:5173/oauth-success?token=${token}`);
+     res.redirect(`http://wellness-mental-health-chatbot.netlify.app/oauth-success?token=${token}`);
   }
 );
 

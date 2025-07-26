@@ -39,6 +39,7 @@ const Home = () => {
     }
   // },[]);
  }, [navigate]);
+ console.log(BASE_URL, "joke-api-42")
 
   return (
     <div className="home-page">

@@ -51,7 +51,7 @@ app.use(passport.session());
 
 // Middleware
 app.use(cors({
-  origin: 'https://wellness-mental-health-chatbot.netlify.app/', // frontend URL
+  origin: 'https://wellness-mental-health-chatbot.netlify.app', // frontend URL
   // methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 }));
