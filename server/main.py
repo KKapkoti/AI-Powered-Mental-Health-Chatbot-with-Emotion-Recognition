@@ -40,7 +40,7 @@ app = FastAPI()
 # -------------------------
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # Replace "*" with your frontend domain in production
+    allow_origins=["http://wellness-mental-health-chatbot.netlify.app"],  # Replace "*" with your frontend domain in production
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
