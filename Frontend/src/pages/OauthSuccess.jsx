@@ -2,6 +2,8 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext"; 
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
+
 
 const OauthSuccess = () => {
   const navigate = useNavigate();
@@ -15,7 +17,7 @@ const OauthSuccess = () => {
   //   if (token) {
   //     // Save token to localStorage
   //     localStorage.setItem("token", token);
-  //     console.log("✅ OAuth Token saved!");
+  //     console.log(" OAuth Token saved!");
   //     setIsAuth(true); 
   //     // Redirect to homepage 
   //     navigate("/");
@@ -35,13 +37,13 @@ const OauthSuccess = () => {
    // Only handle if token exists in the URL
    if (token) {
     localStorage.setItem("token", token);
-    console.log("✅ OAuth Token saved!");
+    console.log(" OAuth Token saved!");
     setIsAuth(true);
 
-     // 🔴 Fetch user profile using token
+     //  Fetch user profile using token
      const fetchUserProfile = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/auth/profile", {
+        const response = await fetch(`${BASE_URL}/api/auth/profile`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

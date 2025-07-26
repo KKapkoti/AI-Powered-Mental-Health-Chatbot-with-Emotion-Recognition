@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from "../contexts/AuthContext";
 import { toast } from 'react-toastify';
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
+
 function Blogs() {
 const [postLists, setPostList] = useState([]);
 const { user, isAuth } = useAuth();
@@ -18,7 +20,7 @@ const backgroundColors = [
 useEffect(() => {
   const getPosts = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/posts");
+      const response = await fetch(`${BASE_URL}/api/posts`);
       const data = await response.json();
       console.log("Fetched Posts:", data);
       setPostList(data.reverse());
@@ -38,7 +40,7 @@ const deletePost = async (id) => {
   const confirmDelete = window.confirm("Are you sure you want to delete this post?");
   if (!confirmDelete) return;
   try {
-    const response = await fetch(`http://localhost:5000/api/posts/${id}`, {
+    const response = await fetch(`${BASE_URL}/api/posts/${id}`, {
       method: "DELETE",
       credentials: "include",
       headers: {

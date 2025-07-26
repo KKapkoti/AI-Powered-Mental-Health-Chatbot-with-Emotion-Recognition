@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./EmotionSection.css";
+const PYTHON_URL = import.meta.env.VITE_PYTHON_URL;
+
 
 const emotionData = {
   sadness: { color: "#607D8B", emoji: "😢" },
@@ -46,7 +48,7 @@ const EmotionMeter = () => {
     setError(null);
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/predict-emotion", {
+      const res = await fetch(`${PYTHON_URL}/predict-emotion`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text }),

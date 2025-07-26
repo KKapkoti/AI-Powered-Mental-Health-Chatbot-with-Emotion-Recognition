@@ -32,12 +32,14 @@ import DepressionQuiz from "../pages/DepressionQuiz";
 import OCDQuiz from "../pages/OcdQuiz";
 import ADHDQuiz from "../pages/ADHDQuiz";
 import SupportGroupsMain from "../pages/SupportGroupsMain";
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
+
 
 const App = () => {
   const { isAuth, setIsAuth } = useAuth();
   const signUserOut = async () => {
     try {
-      await fetch("http://localhost:5000/api/auth/logout", {
+      await fetch(`${BASE_URL}/api/auth/logout`, {
         method: "GET",
         credentials: "include",
       });

@@ -6,6 +6,8 @@ import "../App.css";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
+
 
 const Navbar = () => {
   const {isAuth, setIsAuth, user} = useAuth(); 
@@ -15,7 +17,7 @@ const Navbar = () => {
 
   const handleLogOutClick = async () => {
     try{
-    await fetch("http://localhost:5000/api/auth/logout", {
+    await fetch(`${BASE_URL}/api/auth/logout`, {
       method: "GET",
       credentials: "include",
     });

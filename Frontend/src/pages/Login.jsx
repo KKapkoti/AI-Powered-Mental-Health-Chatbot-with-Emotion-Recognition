@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 import axios from "axios";
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
+
 const LoginSignup = () => {
   const { setIsAuth, setUser } = useAuth();
   const [isLogin, setIsLogin] = useState(true);
@@ -20,8 +22,8 @@ const LoginSignup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const endpoint = isLogin
-      ? "http://localhost:5000/api/auth/login"
-      : "http://localhost:5000/api/auth/register";
+      ? `${BASE_URL}/api/auth/login`
+      : `${BASE_URL}/register`;
 
     try {
       const response = await axios.post(endpoint, formData, { withCredentials: true });
@@ -42,11 +44,11 @@ const LoginSignup = () => {
     }
   };
   const signInWithGoogle = () => {
-    window.open("http://localhost:5000/api/auth/google", "_self");
+    window.open(`${BASE_URL}/api/auth/google`, "_self");
   };
   const handleLogOutClick = async () => {
     try {
-      await fetch("http://localhost:5000/api/auth/logout", {
+      await fetch(`${BASE_URL}/api/auth/logout`, {
         method: "GET",
         credentials: "include",
       });

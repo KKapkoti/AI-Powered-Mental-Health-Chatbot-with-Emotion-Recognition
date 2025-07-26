@@ -8,6 +8,8 @@ import EmotionSection from "./EmotionSection";
 import BootstrapChatbot from "../components/BootstrapChatbot";
 // import DoctorConsultation from "../components/DoctorConsultation"; 
 import { useNavigate } from "react-router-dom";
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
+
 
 const Home = () => {
   const [joke, setJoke] = useState("");
@@ -19,7 +21,7 @@ const Home = () => {
   const fetchJoke = async () => {
     try {
       const response = await axios.get(
-        'http://localhost:5000/api/joke'
+        `${BASE_URL}/api/joke`
       );
       setJoke(response.data.setup + " " + response.data.punchline);
       setLoading(false); // Set loading to false once the joke is fetched

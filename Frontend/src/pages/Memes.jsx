@@ -1,6 +1,8 @@
 //src/pages/Memes.jsx
 import React, { useState } from "react";
 import ".././App.css";
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
+
 
 function MemePage() {
   const [selectedMeme, setSelectedMeme] = useState("");
@@ -51,7 +53,7 @@ function MemePage() {
     // Add more meme templates here
   ];
 
-  const generateMemeUrl = "http://localhost:5000/api/generateMeme";
+  const generateMemeUrl = `${BASE_URL}/api/generateMeme`;
 
   const handleGenerateMeme = async () => {
     if (selectedMeme) {
