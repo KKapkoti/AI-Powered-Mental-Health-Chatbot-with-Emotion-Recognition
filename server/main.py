@@ -1,3 +1,4 @@
+# server/main.py
 from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
@@ -40,7 +41,7 @@ app = FastAPI()
 # -------------------------
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://wellness-mental-health-chatbot.netlify.app"],  # Replace "*" with your frontend domain in production
+    allow_origins=["https://wellness-mental-health-chatbot.netlify.app"],  # Replace "*" with your frontend domain in production
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
